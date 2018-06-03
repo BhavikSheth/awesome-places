@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -25,8 +26,7 @@
     "test": "jest",
     "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'",
     "precommit": "lint-staged",
-    "eslint-check":
-      "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "prettier": {
     "jsxBracketSameLine": true,
@@ -34,7 +34,10 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "*.js": ["prettier --write", "git add"]
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "react-native"
